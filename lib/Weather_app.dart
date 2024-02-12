@@ -53,7 +53,15 @@ class WeatherApp extends StatelessWidget {
                       ),
                     ],
                   ),
-                ))
+                )),
+            SizedBox(height: 20,),
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text('Forecast Live',style: TextStyle(fontSize: 35,fontWeight:FontWeight.bold),),
+            ),
+            SizedBox(height: 20,),
+            //FOrecase Row Start overhere
+
           ],
         ),
       ),
