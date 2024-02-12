@@ -72,104 +72,15 @@ class WeatherApp extends StatelessWidget {
                scrollDirection:Axis.horizontal,
                child: Row(
                 children: [
-                  Card(
-                    child: SizedBox(
-                      width:100,
-                      height: 100,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('45.34',style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold),),
-                          Icon(Icons.cloud,size: 34,),
-                          Text('78.45'),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Card(
-                    child: SizedBox(
-                      width:100,
-                      height: 100,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('45.34',style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold),),
-                          Icon(Icons.cloud,size: 34,),
-                          Text('78.45'),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Card(
-                    child: SizedBox(
-                      width:100,
-                      height: 100,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('45.34',style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold),),
-                          Icon(Icons.cloud,size: 34,),
-                          Text('78.45'),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Card(
-                    child: SizedBox(
-                      width:100,
-                      height: 100,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('45.34',style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold),),
-                          Icon(Icons.cloud,size: 34,),
-                          Text('78.45'),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Card(
-                    child: SizedBox(
-                      width:100,
-                      height: 100,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('45.34',style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold),),
-                          Icon(Icons.cloud,size: 34,),
-                          Text('78.45'),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Card(
-                    child: SizedBox(
-                      width:100,
-                      height: 100,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('45.34',style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold),),
-                          Icon(Icons.cloud,size: 34,),
-                          Text('78.45'),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Card(
-                    child: SizedBox(
-                      width:100,
-                      height: 100,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('45.34',style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold),),
-                          Icon(Icons.cloud,size: 34,),
-                          Text('78.45'),
-                        ],
-                      ),
-                    ),
-                  ),
+                  Forecast(),
+                  Forecast(),
+                  Forecast(),
+                  Forecast(),
+                  Forecast(),
+                  Forecast(),
+                  Forecast(),
+                  Forecast(),
+                  Forecast(),
                 ],
                            ),
              )
@@ -179,3 +90,26 @@ class WeatherApp extends StatelessWidget {
     );
   }
 }
+
+class Forecast extends StatelessWidget {
+  const Forecast({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const  Card(
+      child: SizedBox(
+        width:100,
+        height: 100,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('45.34',style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold),),
+            Icon(Icons.cloud,size: 34,),
+            Text('78.45'),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
