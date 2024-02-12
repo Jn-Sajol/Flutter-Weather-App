@@ -29,8 +29,8 @@ class WeatherApp extends StatelessWidget {
         child: Column(
           children: [
             Card(
-              surfaceTintColor: Colors.red,
                 elevation: 23,
+                // color:Colors.black,
                 child: Container(
                   width: double.infinity,
                   padding: EdgeInsets.all(12),
@@ -45,6 +45,7 @@ class WeatherApp extends StatelessWidget {
                       Icon(
                         Icons.cloud,
                         size: 65,
+                        // color: Colors.white,
                       ),
                       Text(
                         'Rain',
