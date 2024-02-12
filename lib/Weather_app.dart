@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_weather_app/Weather_app.dart';
+import 'package:flutter_weather_app/additional.dart';
+import 'package:flutter_weather_app/forecast_widget.dart';
 
 class WeatherApp extends StatelessWidget {
   const WeatherApp({super.key});
@@ -25,7 +28,7 @@ class WeatherApp extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(5),
+        padding: EdgeInsets.all(10),
         child: Column(
           children: [
             Card(
@@ -72,15 +75,31 @@ class WeatherApp extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Forecast(),
-                  Forecast(),
-                  Forecast(),
-                  Forecast(),
-                  Forecast(),
-                  Forecast(),
-                  Forecast(),
-                  Forecast(),
-                  Forecast(),
+                  Forecast(
+                    temp:45.34,
+                    ico:Icons.cloud,
+                    val:42.23,
+                  ),
+                  Forecast(
+                    temp:45.34,
+                    ico:Icons.cloud,
+                    val:42.23,
+                  ),
+                  Forecast(
+                    temp:45.34,
+                    ico:Icons.cloud,
+                    val:42.23,
+                  ),
+                  Forecast(
+                    temp:45.34,
+                    ico:Icons.cloud,
+                    val:42.23,
+                  ),
+                  Forecast(
+                    temp:45.34,
+                    ico:Icons.cloud,
+                    val:42.23,
+                  ),
                 ],
               ),
             ),
@@ -92,58 +111,38 @@ class WeatherApp extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Windy Information',
-                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold,fontFamily:'Courier'),
                 )),
             const SizedBox(
               height: 20,
             ),
-
-            //  const Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //   children: [
-            //     Card(
-            //         child: Column(
-            //           children: [
-            //             Text('Forecast'),
-            //             Icon(Icons.air),
-            //             Text('hello'),
-            //           ],
-            //         ),
-            //       ),
-            //
-            //   ],
-            // ),
-            Container(
-              width: double.infinity,
-              padding: EdgeInsets.all(22),
-              // color: Colors.black,
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      Icon(Icons.air,size: 44,color: Colors.white,),
-                      Text('Forecast',style: TextStyle(color:Colors.white,fontSize: 25),),
-                      Text('88.9',style: TextStyle(color:Colors.white,fontSize: 25)),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Icon(Icons.air,size: 44,color: Colors.white,),
-                      Text('Forecast',style: TextStyle(color:Colors.white,fontSize: 25),),
-                      Text('88.9',style: TextStyle(color:Colors.white,fontSize: 25)),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Icon(Icons.air,size: 44,color: Colors.white,),
-                      Text('Forecast',style: TextStyle(color:Colors.white,fontSize: 25),),
-                      Text('88.9',style: TextStyle(color:Colors.white,fontSize: 25)),
-                    ],
-                  ),
-                ],
+        Container(
+          width: double.infinity,
+          padding: EdgeInsets.all(22),
+          // color: Colors.black,
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Additional(
+                icon:Icons.water_drop,
+                label:'Humanaid',
+                num:89,
               ),
-            )
+              Additional(
+                icon:Icons.air,
+                label:'air',
+                num:89,
+              ),
+              Additional(
+                icon:Icons.sunny,
+                label:'Synny',
+                num:89,
+              ),
+            ],
+          ),
+        )
+
+
           ],
         ),
       ),
@@ -151,30 +150,5 @@ class WeatherApp extends StatelessWidget {
   }
 }
 
-class Forecast extends StatelessWidget {
-  const Forecast({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const Card(
-      child: SizedBox(
-        width: 100,
-        height: 100,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              '45.34',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            Icon(
-              Icons.cloud,
-              size: 34,
-            ),
-            Text('78.45'),
-          ],
-        ),
-      ),
-    );
-  }
-}
+
