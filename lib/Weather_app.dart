@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_app/Weather_app.dart';
 import 'package:flutter_weather_app/additional.dart';
 import 'package:flutter_weather_app/forecast_widget.dart';
 
 class WeatherApp extends StatelessWidget {
   const WeatherApp({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +20,7 @@ class WeatherApp extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              print('refreshed');
+              // print('refreshed');
             },
             icon: const Icon(Icons.refresh),
           )
@@ -41,7 +40,7 @@ class WeatherApp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "Weather App",
+                        "30°",
                         style: TextStyle(
                             fontSize: 34, fontWeight: FontWeight.bold),
                       ),
@@ -76,28 +75,28 @@ class WeatherApp extends StatelessWidget {
               child: Row(
                 children: [
                   Forecast(
-                    temp:45.34,
+                    time:2.34,
                     ico:Icons.cloud,
                     val:42.23,
                   ),
                   Forecast(
-                    temp:45.34,
+                    time:3.34,
+                    ico:Icons.sunny,
+                    val:42.23,
+                  ),
+                  Forecast(
+                    time:4.34,
                     ico:Icons.cloud,
                     val:42.23,
                   ),
                   Forecast(
-                    temp:45.34,
+                    time:5.34,
                     ico:Icons.cloud,
                     val:42.23,
                   ),
                   Forecast(
-                    temp:45.34,
-                    ico:Icons.cloud,
-                    val:42.23,
-                  ),
-                  Forecast(
-                    temp:45.34,
-                    ico:Icons.cloud,
+                    time:6.34,
+                    ico:Icons.sunny,
                     val:42.23,
                   ),
                 ],

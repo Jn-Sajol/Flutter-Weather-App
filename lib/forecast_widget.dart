@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Forecast extends StatelessWidget {
-  final double temp;
+  final double time;
   final IconData ico;
   final double val;
   const Forecast({
     super.key,
     required this.ico,
-    required this.temp,
+    required this.time,
     required this.val,
   });
 
@@ -21,7 +21,7 @@ class Forecast extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              temp.toString(),
+              time.toString(),
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             Icon(
