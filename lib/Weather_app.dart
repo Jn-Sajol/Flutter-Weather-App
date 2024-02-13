@@ -40,7 +40,7 @@ class WeatherApp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "30°",
+                        "32°",//main data will come from api
                         style: TextStyle(
                             fontSize: 34, fontWeight: FontWeight.bold),
                       ),
